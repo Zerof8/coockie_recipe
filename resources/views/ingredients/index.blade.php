@@ -8,12 +8,11 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6">
-{{--                <!-- Statement about the ingredient limit -->--}}
+               <!-- Statement about the ingredient limit -->
 {{--                <div class="mb-4 text-gray-800">--}}
 {{--                    <p class="text-sm">You can add up to 4 ingredients.</p>--}}
 {{--                </div>--}}
 
-                <!-- Table with picture and buttons -->
                 <div class="flex flex-col md:flex-row items-center md:justify-between">
                     <!-- Table -->
                     <table class="max-w-full md:flex-grow mb-4 md:mb-0 overflow-x-auto">
@@ -72,12 +71,12 @@
                                 <td class="px-2 py-2 whitespace-nowrap text-center">{{ $ingredient['flavor'] }}</td>
                                 <td class="px-2 py-2 whitespace-nowrap text-center">{{ $ingredient['texture'] }}</td>
                                 <td class="px-2 py-2 whitespace-nowrap text-center">{{ $ingredient['calories'] }}</td>
-{{--                                <!-- Add to Recipe column -->--}}
+                                <!-- Add to Recipe column -->
 {{--                                <td class="px-2 py-2 whitespace-nowrap text-center">--}}
 {{--                                    <input type="number" class="form-input w-20 add-to-recipe" min="0" max="100"--}}
 {{--                                           value="0">--}}
 {{--                                </td>--}}
-{{--                                <!-- Actions column -->--}}
+                                <!-- Actions column -->
 {{--                                <td class="px-2 py-2 whitespace-nowrap text-center">--}}
 {{--                                    @include('ingredients.edit')--}}
 {{--                                    <!-- Form for deleting an ingredient -->--}}
@@ -97,7 +96,7 @@
                         </tbody>
                     </table>
                 </div>
-{{--                <!-- Include the create modal -->--}}
+                <!-- Include the create modal -->
 {{--                <div class="flex justify-end mt-4">--}}
 {{--                    <div class="w-full">--}}
 {{--                        @if (count($ingredients) < 4)--}}
