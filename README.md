@@ -62,6 +62,7 @@ To add new ingredients, you can modify the config/ingredients.php file.
 Each ingredient is represented as an associative array with properties such as name, capacity, durability, flavor, texture, and calories.
 
 ### Customization and Extension
+(Commented-out)
 - Database Structure: The project includes an unused database structure and seeders, allowing for easy extension and integration with a database-backed system.
 - Support for New Ingredients: All functions used in this project are capable of handling new types of ingredients. Simply update the config/ingredients.php file with the new ingredients' properties.
 - Add, Remove, and Edit Ingredients: The functionality to add, remove, and edit ingredients is available but commented out for later development. To enable it, uncomment the relevant sections in the views and controllers, then make sure to use the database structure instead of the current config one.
