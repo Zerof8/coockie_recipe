@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Services\CalculationService;
-use App\Models\Ingredient;
+//use App\Models\Ingredient;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -18,12 +18,15 @@ class CalculationController extends Controller
 
     public function calculate(Request $request)
     {
+        $result = [];
+
         // Retrieve ingredients and quantities from the request
         $ingredients = config('ingredients');
+
         $calories = $request->input('calories');
+
         // Determine the action based on the value of the 'action' field
         $action = $request->input('action');
-        $result = [];
 
         // Call the appropriate method from the CalculationService
         switch ($action) {

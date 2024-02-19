@@ -19,6 +19,10 @@ class CalculationService
             }
         }
 
+        if ($highestScore === 0) {
+            return ['message' => 'Calculation not possible with the given ingredients.'];
+        }
+
         return ['score' => $highestScore, 'quantities' => $highestQuantities];
     }
 
