@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CalculationController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IngredientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [IngredientController::class, 'index'])->name('ingredients.index');
+
 
 Route::middleware([
-    'auth:sanctum',
+//    'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
@@ -26,3 +28,8 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::resource('ingredients', IngredientController::class);
+Route::post('/calculate', [CalculationController::class, 'calculate'])->name('calculate');
+
+
